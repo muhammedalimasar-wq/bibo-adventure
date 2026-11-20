@@ -22,7 +22,8 @@ jobs:
           distribution: temurin
           java-version: 21
 
-      - uses: android-actions/setup-android@v3
+      # GitHub's Ubuntu runners already ship the Android SDK (ANDROID_HOME),
+      # so no separate SDK setup step is needed.
 
       - name: Copy the game into the app
         run: |
